@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- adding the css file -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: #87ceed; max-width:full; border: 2px; border-color: black; margin-top: 4%; margin-left: 6%;" >
+    <!-- container for holding the weather card -->
+    <div class="container">
+      <span class=" md:flex justify-evenly ">
+      <h1 class=" sm:px-8 mr-10 text-[25px] px-10 py-4 backdrop-blur drop-shadow-2xl border-2 bg-zinc-100 rounded-lg flex gap-2"><img src="https://logodix.com/logo/448460.png" height="50px" width="50px">Weather Web App</h1>
+      <div>
+      <!-- section for searching the weather of a city -->
+      <form  onsubmit="getData(event)" class="searchData" style="margin-top: 10px;">
+        <input class="px-6 py-2 bg-zinc-200 border-2 rounded-lg border-black hover:px-8 hover:drop-shadow-2xl" id="inputBox" type="text" placeholder="Enter the city name" />
+        <button class="px-6 py-2 bg-zinc-400 border-2 rounded-lg font-semibold ">Search</button>
+      </form>
+    </div>
+    </span>
+      <!-- section for displaying the city weather data -->
+      <br>
+      <br>
+      <br>
+      <section class="cityWeatherData">
+        <!-- displaying the country details -->
+        <div id="countryDetails details" style="display: flex; justify-content: space-evenly;" class="sm:mr-6% gap-2">
+          <!-- displaying the country name -->
+          <span class="px-7 py-7 border-2 border-white bg-zinc-200 rounded-lg drop-shadow-2xl  ">
+          <div class="card">
+            <p class="text-xs ">Country Name</p>
+            <p class="text-center text-[20px] font-semibold" id="countryName">  </p>
+          </div>
+          </span>
+          <!-- displaying the state name -->
+        <span class="px-7 py-7 border-2 border-white  bg-zinc-200 rounded-lg drop-shadow-2xl">
+          <div class="card">
+            <p class="text-xs ">State Name </p>
+            <p class="text-center text-[20px] font-semibold" id="stateName">  </p>
+          </div>
+        </span>
+          <!-- displaying the city name -->
+          <span class="px-7 py-7  border-2 border-white  bg-zinc-200 rounded-lg drop-shadow-2xl">
+          <div class="card">
+            <p class="text-xs ">City Name </p>
+            <p class="text-center text-[20px] font-semibold" id="cityName">  </p>
+          </div>
+          </span>
+        </div>
+<br>
+<br>
+<br>
+        <!-- displaying the weather status -->
+        <div id="weatherDetails details"  style="display: flex; justify-content: space-evenly; " class="sm:mr-6% gap-2">
+          <!-- displaying the humidity -->
+          <span class="px-7 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <div class="card" >
+            <p class="text-xs">Humidity</p>
+            <p  class="text-center text-[20px] font-semibold" id="humidity">  </p>
+          </div>
+          </span>
+          <!-- displaying the wind speed -->
+          <span class="px-6 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <div class="card" >
+            <p class="text-xs" > Wind Speed</p>
+            <p class="text-center text-[20px] font-semibold text-xs" ><span id="windSpeed">  </span> KMPH</p>
+          </div>
+          </span>
+          <!-- displaying the current temprature in celcius -->
+          <span class="px-7 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <div class="card">
+            <p class="text-xs">Temprature</p>
+            <!-- unicode for degree celcius symbol -->
+            <p  class="text-center text-[20px] font-semibold text-xs"><span  id="temprature">  </span>&#8451;</p>
+          </div>
+          </span>
+        </div>
+          <!-- displaying the weather condition -->
+          <br>
+          <br>
+          <br>
+          <span  class="flex justify-center">
+          <div class="card" style="display: flex;">
+            <img  width="100px" id="logoImage" src="" alt="" />
+            <p class="text-center text-[20px] font-semibold px-4 py-4 border-2 border-white  mb-4 bg-zinc-200 rounded-lg" id="weatherStatus">  </p>
+          </div>
+        </span>
+        </div>
+      </section>
+      <p class="text-center underline">Thank you for visiting my app</p>
+  </body>
+
+  <!-- adding the javascript file -->
+  <script src="./script.js">
+  </script>
+</html>
