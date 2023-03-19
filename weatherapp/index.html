@@ -9,16 +9,16 @@
     <!-- adding the css file -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body style="background-color: #87ceed; max-width:full; border: 2px; border-color: black; margin-top: 4%; margin-left: 6%;" >
+  <body style="background-image:url(https://www.maketecheasier.com/assets/uploads/2020/06/Featured-Image-Live-Weather-Wallpapers-Android.jpg); border: 2px; border-color: black; margin-top: 4%; margin-left: 6%;" >
     <!-- container for holding the weather card -->
     <div class="container">
       <span class=" md:flex justify-evenly ">
-      <h1 class=" sm:px-8 mr-10 text-[25px] px-10 py-4 backdrop-blur drop-shadow-2xl border-2 bg-zinc-100 rounded-lg flex gap-2"><img src="https://logodix.com/logo/448460.png" height="50px" width="50px">Weather Web App</h1>
+      <h1 class=" sm:px-8 mr-10 text-[25px] px-10 py-4 text-black backdrop-blur opacity-50 drop-shadow-2xl border-2 border-black bg-zinc-100 rounded-lg flex gap-2"><img src="https://logodix.com/logo/448460.png" height="50px" width="50px">Weather Web App</h1>
       <div>
       <!-- section for searching the weather of a city -->
       <form  onsubmit="getData(event)" class="searchData" style="margin-top: 10px;">
-        <input class="px-6 py-2 bg-zinc-200 border-2 rounded-lg border-black hover:px-8 hover:drop-shadow-2xl" id="inputBox" type="text" placeholder="Enter the city name" />
-        <button class="px-6 py-2 bg-zinc-400 border-2 rounded-lg font-semibold ">Search</button>
+        <input class="px-6  opacity-50 py-2 bg-zinc-200 border-2 rounded-lg border-black hover:px-8 hover:drop-shadow-2xl" id="inputBox" type="text" placeholder="Enter the city name" />
+        <button class="px-6 opacity-50 py-2 bg-zinc-400 border-2 rounded-lg font-semibold border-black">Search</button>
       </form>
     </div>
     </span>
@@ -30,24 +30,24 @@
         <!-- displaying the country details -->
         <div id="countryDetails details" style="display: flex; justify-content: space-evenly;" class="sm:mr-6% gap-2">
           <!-- displaying the country name -->
-          <span class="px-7 py-7 border-2 border-white bg-zinc-200 rounded-lg drop-shadow-2xl  ">
+          <span class="px-7 py-7 opacity-40 border-2 border-black bg-zinc-200 rounded-lg drop-shadow-2xl  ">
           <div class="card">
-            <p class="text-xs ">Country Name</p>
-            <p class="text-center text-[20px] font-semibold" id="countryName">  </p>
+            <p class="text-xs font-bold text-black">Country Name</p>
+            <p class="text-center text-[20px] font-semibold font-bold text-black" id="countryName">  </p>
           </div>
           </span>
           <!-- displaying the state name -->
-        <span class="px-7 py-7 border-2 border-white  bg-zinc-200 rounded-lg drop-shadow-2xl">
+        <span class="px-7 py-7 border-2 border-black opacity-40  bg-zinc-200 rounded-lg drop-shadow-2xl">
           <div class="card">
-            <p class="text-xs ">State Name </p>
-            <p class="text-center text-[20px] font-semibold" id="stateName">  </p>
+            <p class="text-xs font-bold text-black">State Name </p>
+            <p class="text-center text-[20px] font-semibold font-bold text-black" id="stateName">  </p>
           </div>
         </span>
           <!-- displaying the city name -->
-          <span class="px-7 py-7  border-2 border-white  bg-zinc-200 rounded-lg drop-shadow-2xl">
+          <span class="px-7 py-7  border-2 border-black opacity-40  bg-zinc-200 rounded-lg drop-shadow-2xl">
           <div class="card">
-            <p class="text-xs ">City Name </p>
-            <p class="text-center text-[20px] font-semibold" id="cityName">  </p>
+            <p class="text-xs font-bold text-black ">City Name </p>
+            <p class="text-center text-[20px] font-semibold font-bold text-black" id="cityName">  </p>
           </div>
           </span>
         </div>
@@ -57,25 +57,25 @@
         <!-- displaying the weather status -->
         <div id="weatherDetails details"  style="display: flex; justify-content: space-evenly; " class="sm:mr-6% gap-2">
           <!-- displaying the humidity -->
-          <span class="px-7 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <span class="px-7 py-7 bg-zinc-200 border-2 border-black opacity-40  rounded-lg drop-shadow-2xl">
           <div class="card" >
-            <p class="text-xs">Humidity</p>
-            <p  class="text-center text-[20px] font-semibold" id="humidity">  </p>
+            <p class="text-xs font-bold text-black">Humidity</p>
+            <p  class="text-center text-[20px] font-bold text-black" id="humidity">  </p>
           </div>
           </span>
           <!-- displaying the wind speed -->
-          <span class="px-6 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <span class="px-6 py-7 bg-zinc-200 border-2 border-black opacity-40  rounded-lg drop-shadow-2xl">
           <div class="card" >
-            <p class="text-xs" > Wind Speed</p>
-            <p class="text-center text-[20px] font-semibold text-xs" ><span id="windSpeed">  </span> KMPH</p>
+            <p class="text-xs font-bold text-black" > Wind Speed</p>
+            <p class="text-center text-[20px] font-semibold text-xs font-bold text-black" ><span id="windSpeed">  </span> KMPH</p>
           </div>
           </span>
           <!-- displaying the current temprature in celcius -->
-          <span class="px-7 py-7 bg-zinc-200 border-2 border-white  rounded-lg drop-shadow-2xl">
+          <span class="px-7 py-7 bg-zinc-200 border-2 border-black opacity-40  rounded-lg drop-shadow-2xl">
           <div class="card">
-            <p class="text-xs">Temprature</p>
+            <p class="text-xs  font-bold text-black">Temprature</p>
             <!-- unicode for degree celcius symbol -->
-            <p  class="text-center text-[20px] font-semibold text-xs"><span  id="temprature">  </span>&#8451;</p>
+            <p  class="text-center text-[20px] font-semibold text-xs font-bold text-black"><span  id="temprature">  </span>&#8451;</p>
           </div>
           </span>
         </div>
@@ -86,7 +86,7 @@
           <span  class="flex justify-center">
           <div class="card" style="display: flex;">
             <img  width="100px" id="logoImage" src="" alt="" />
-            <p class="text-center text-[20px] font-semibold px-4 py-4 border-2 border-white  mb-4 bg-zinc-200 rounded-lg" id="weatherStatus">  </p>
+            <p class="text-center text-[20px] font-semibold px-4 py-4 opacity-40 border-2 border-black  mb-4 bg-zinc-200 rounded-lg" id="weatherStatus">  </p>
           </div>
         </span>
         </div>
